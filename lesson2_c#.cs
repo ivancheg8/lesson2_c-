@@ -5,21 +5,20 @@
 918 -> 1
 */
 
-
+/*
 Console.Write("Введите трёхзначное число: ");
-var a = Console.ReadLine();
-var b = a.Length;
+int n1 = Convert.ToInt32(Console.ReadLine());
 
-if (b != 3)
+int tree(int num1)
 {
-    Console.WriteLine("Неправильный ввод!");
-    return;
+    int n3 = num1 / 10;
+    int n4 = n3 % 10;
+    return n4;
 }
 
-var c = a.ToString();
-Console.WriteLine(c[1]);
-
-
+int sec = tree(n1);
+Console.WriteLine(sec);
+*/
 
 
 
@@ -32,20 +31,23 @@ Console.WriteLine(c[1]);
 32679 -> 6
 */
 
-
 Console.Write("Введите число: ");
 var a = Console.ReadLine();
-var b = a.Length;
 
-if (b <= 2)
+void tree(string num1)
 {
-    Console.WriteLine("Третьей цифры нет(");
-    return;
+    int b = num1.Length;
+
+    if (b <= 2)
+    {
+        Console.WriteLine("Третьей цифры нет(");
+        return;
+    }
+
+    var c = a.ToString();
+    Console.WriteLine("Третья цифра числа: " + c[2]);
 }
-
-var c = a.ToString();
-Console.WriteLine(c[2]);
-
+tree(a);
 
 
 
@@ -57,22 +59,27 @@ Console.WriteLine(c[2]);
 7 -> да
 1 -> нет
 */
-
-
+/*
 Console.Write("Введите число 1-7: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-if (a > 7)
+void day(int num1)
 {
-    Console.WriteLine("Неправильный ввод!");
+    if (a > 7)
+    {
+        Console.WriteLine("Неправильный ввод!");
+    }
+
+    if (a > 0 && a < 6)
+    {
+        Console.WriteLine("Сегодня будний день");
+    }
+
+    if (a > 5 && a < 8)
+    {
+        Console.WriteLine("Сегодня выходной");
+    }
 }
 
-if (a > 0 && a < 6)
-{
-    Console.WriteLine("Сегодня будний день");
-}
-
-if (a > 5 && a < 8)
-{
-    Console.WriteLine("Сегодня выходной");
-}
+day(a);
+*/
