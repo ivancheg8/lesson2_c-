@@ -10,7 +10,7 @@ int a = Convert.ToInt32(Console.ReadLine());
 
 int tree(int num1)
 {
-    if (num1 > 999 || num1 < 100)
+    if (num1 > 999 || num1 < 100) //проверка, что число трёхзначное
     {
         Console.Write("Число не трёхзначное! ");
         return num1;
@@ -59,18 +59,18 @@ int a = Convert.ToInt32(Console.ReadLine());
 
 int tree(int num1)
 {
-    if (num1 < 100 && num1 > -100)
+    if (num1 < 100 && num1 > -100) //проверка разрядности числа
     {
         Console.WriteLine("У введённого числа нет третьей цифры(");
         return num1;
     }
 
-    if (num1 < 0) num1 = num1 * -1;
+    if (num1 < 0) num1 = num1 * -1; //проверка на отрицательное число
 
     int temp = num1;
     int count = 0;
 
-    while (temp > 0)
+    while (temp > 0) //вычисление разрядности числа
     {
         temp = temp / 10;
         count++;
@@ -79,7 +79,7 @@ int tree(int num1)
     count = count - 3;
     var temp2 = Math.Pow(10, count);
 
-    return (num1 / Convert.ToInt32(temp2)) % 10;
+    return (num1 / Convert.ToInt32(temp2)) % 10; //поиск третьей цифры
 }
 int sec = tree(a);
 Console.WriteLine(sec);
