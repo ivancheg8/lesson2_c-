@@ -5,7 +5,6 @@
 918 -> 1
 */
 
-/*
 Console.Write("Введите трёхзначное число: ");
 int n1 = Convert.ToInt32(Console.ReadLine());
 
@@ -18,7 +17,7 @@ int tree(int num1)
 
 int sec = tree(n1);
 Console.WriteLine(sec);
-*/
+
 
 
 
@@ -59,7 +58,7 @@ tree(a);
 7 -> да
 1 -> нет
 */
-/*
+
 Console.Write("Введите число 1-7: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
@@ -82,4 +81,3 @@ void day(int num1)
 }
 
 day(a);
-*/
