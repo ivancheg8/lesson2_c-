@@ -6,16 +6,19 @@
 */
 
 Console.Write("Введите трёхзначное число: ");
-int n1 = Convert.ToInt32(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 
 int tree(int num1)
 {
-    int n3 = num1 / 10;
-    int n4 = n3 % 10;
-    return n4;
-}
+    if (num1 > 999 || num1 < 100)
+    {
+        Console.Write("Число не трёхзначное! ");
+        return num1;
+    }
 
-int sec = tree(n1);
+    return (num1 / 10) % 10;
+}
+int sec = tree(a);
 Console.WriteLine(sec);
 
 
@@ -79,5 +82,4 @@ void day(int num1)
         Console.WriteLine("Сегодня выходной");
     }
 }
-
 day(a);
