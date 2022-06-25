@@ -33,6 +33,7 @@ Console.WriteLine(sec);
 32679 -> 6
 */
 
+// 1 вариант через string
 Console.Write("Введите число: ");
 var a = Console.ReadLine();
 
@@ -51,6 +52,37 @@ void tree(string num1)
 }
 tree(a);
 
+
+// 2 вариант через математику
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+int tree(int num1)
+{
+    if (num1 < 100 && num1 > -100)
+    {
+        Console.WriteLine("У введённого числа нет третьей цифры(");
+        return num1;
+    }
+
+    if (num1 < 0) num1 = num1 * -1;
+
+    int temp = num1;
+    int count = 0;
+
+    while (temp > 0)
+    {
+        temp = temp / 10;
+        count++;
+    }
+
+    count = count - 3;
+    var temp2 = Math.Pow(10, count);
+
+    return (num1 / Convert.ToInt32(temp2)) % 10;
+}
+int sec = tree(a);
+Console.WriteLine(sec);
 
 
 
