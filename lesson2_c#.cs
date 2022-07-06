@@ -5,9 +5,6 @@
 918 -> 1
 */
 
-Console.Write("Введите трёхзначное число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-
 int tree(int num1)
 {
     if (num1 > 999 || num1 < 100) //проверка, что число трёхзначное
@@ -18,6 +15,8 @@ int tree(int num1)
 
     return (num1 / 10) % 10;
 }
+Console.Write("Введите трёхзначное число: ");
+int a = Convert.ToInt32(Console.ReadLine());
 int sec = tree(a);
 Console.WriteLine(sec);
 
@@ -34,8 +33,6 @@ Console.WriteLine(sec);
 */
 
 // 1 вариант через string
-Console.Write("Введите число: ");
-var a = Console.ReadLine();
 
 void tree(string num1)
 {
@@ -50,13 +47,12 @@ void tree(string num1)
     var c = a.ToString();
     Console.WriteLine("Третья цифра числа: " + c[2]);
 }
+Console.Write("Введите число: ");
+var a = Console.ReadLine();
 tree(a);
 
 
 // 2 вариант через математику
-Console.Write("Введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-
 int tree(int num1)
 {
     if (num1 < 100 && num1 > -100) //проверка разрядности числа
@@ -81,6 +77,8 @@ int tree(int num1)
 
     return (num1 / Convert.ToInt32(temp2)) % 10; //поиск третьей цифры
 }
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
 int sec = tree(a);
 Console.WriteLine(sec);
 
@@ -93,9 +91,6 @@ Console.WriteLine(sec);
 7 -> да
 1 -> нет
 */
-
-Console.Write("Введите число 1-7: ");
-int a = Convert.ToInt32(Console.ReadLine());
 
 void day(int num1)
 {
@@ -114,4 +109,6 @@ void day(int num1)
         Console.WriteLine("Сегодня выходной");
     }
 }
+Console.Write("Введите число 1-7: ");
+int a = Convert.ToInt32(Console.ReadLine());
 day(a);
